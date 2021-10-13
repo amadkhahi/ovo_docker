@@ -14,7 +14,7 @@ USER webhooks
 
 
 ENV TAG v2.3.4
-RUN svn checkout https://github.com/bigbluebutton/bigbluebutton/tags/$TAG/bbb-webhooks /app \
+RUN svn checkout https://gitlab.com/toantony06/room-iface/bbb-webhooks /app \
     && rm -rf /app/.svn \
     && cd /app && npm install --production
 
