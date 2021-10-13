@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y \
 # is no other sane way of downloading a single directory via git
 
 ENV TAG v2.3.4
-RUN svn checkout https://gitlab.com/toantony06/room-iface/-/tree/v2.3/bbb-voice-conference/config/freeswitch/conf /etc/freeswitch \
+RUN svn checkout https://github.com/bigbluebutton/bigbluebutton/tags/$TAG/bbb-voice-conference/config/freeswitch/conf /etc/freeswitch \
     && rm -rf /etc/freeswitch/.svn
 
 # the current available freeswitch-mod-opusfile is broken,

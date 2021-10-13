@@ -49,8 +49,8 @@ ENV TAG v2.3.14
 
 # add bbb-record-core (lib, scripts and Gemfile)
 RUN cd /usr/local/bigbluebutton/core \
-    && svn checkout https://gitlab.com/toantony06/room-iface/-/tree/v2.3/record-and-playback/core/lib \
-    && svn checkout https://gitlab.com/toantony06/room-iface/-/tree/v2.3/record-and-playback/core/scripts \
+    && svn checkout https://github.com/bigbluebutton/bigbluebutton/tags/$TAG/record-and-playback/core/lib \
+    && svn checkout https://github.com/bigbluebutton/bigbluebutton/tags/$TAG/record-and-playback/core/scripts \
     && rm -rf /usr/local/bigbluebutton/core/*/.svn \
     && wget https://raw.githubusercontent.com/bigbluebutton/bigbluebutton/$TAG/record-and-playback/core/Gemfile.lock \
     && wget https://raw.githubusercontent.com/bigbluebutton/bigbluebutton/$TAG/record-and-playback/core/Gemfile \
@@ -58,7 +58,7 @@ RUN cd /usr/local/bigbluebutton/core \
 
 # add bbb-playback-presentation scripts
 RUN cd /tmp \
-    && svn checkout https://gitlab.com/toantony06/room-iface/-/tree/v2.3/record-and-playback/presentation/scripts \
+    && svn checkout https://github.com/bigbluebutton/bigbluebutton/tags/$TAG/record-and-playback/presentation/scripts \
     && rsync -av /tmp/scripts/ /usr/local/bigbluebutton/core/scripts/ \
     && rm -rf /tmp/scripts
 
