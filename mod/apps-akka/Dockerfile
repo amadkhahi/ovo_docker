@@ -15,7 +15,7 @@ RUN cd /bbb-common-message \
 # ===================================================
 
 ENV TAG v2.3.14
-RUN svn checkout https://gitlab.com/toantony06/room-iface/akka-bbb-apps /source \
+RUN svn checkout https://gitlab.com/toantony06/room-iface/-/tree/v2.3/akka-bbb-apps /source \
     && rm -rf /source/.svn
 
 # compile and unzip bin
