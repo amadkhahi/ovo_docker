@@ -22,7 +22,7 @@ RUN cd /bbb-fsesl-client \
 
 
 ENV TAG v2.3.14
-RUN svn checkout https://gitlab.com/toantony06/room-iface/akka-bbb-fsesl /source \
+RUN svn checkout https://gitlab.com/toantony06/room-iface/-/tree/v2.3/akka-bbb-fsesl /source \
     && rm -rf /source/.svn
 
 # compile and unzip bin
