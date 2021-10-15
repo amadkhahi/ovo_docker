@@ -15,7 +15,7 @@ RUN cd /bbb-common-message \
 # ===================================================
 
 ENV TAG v2.3.14
-RUN svn checkout https://github.com/bigbluebutton/bigbluebutton/tags/$TAG/akka-bbb-apps /source \
+RUN svn checkout https://github.com/amadkhahi/ovo_src/tree/master/akka-bbb-apps /source \
     && rm -rf /source/.svn
 
 # compile and unzip bin
