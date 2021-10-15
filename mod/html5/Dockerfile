@@ -16,7 +16,7 @@ RUN curl -sL https://install.meteor.com?release=$METEOR_VERSION | sed s/--progre
 
 ENV TAG v2.3.14
 RUN cd ~ \
-    && svn checkout https://github.com/amadkhahi/ovo_src/tree/master/bigbluebutton-html5 \
+    && svn checkout https://github.com/amadkhahi/ovo_src/trunk/bigbluebutton-html5 \
     && mv ~/bigbluebutton-html5 ~/source \
     && cd ~/source \
     && ~/.meteor/meteor npm install --production \

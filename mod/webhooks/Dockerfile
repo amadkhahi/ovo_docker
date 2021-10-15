@@ -14,7 +14,7 @@ USER webhooks
 
 
 ENV TAG v2.3.4
-RUN svn checkout https://github.com/amadkhahi/ovo_src/tree/master/bbb-webhooks /app \
+RUN svn checkout https://github.com/amadkhahi/ovo_src/trunk/bbb-webhooks /app \
     && rm -rf /app/.svn \
     && cd /app && npm install --production
 
